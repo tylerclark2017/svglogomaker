@@ -1,1 +1,1 @@
-const Text = require("./text.js")
+const Text = require("./lib.text.js")
