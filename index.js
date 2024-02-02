@@ -1,8 +1,8 @@
 const readline = require("readline");
 const fs = require("fs");
-const SVG = require("./svg.js");
-const shapes = require("./shapes.js");
-const Text = require("./.js");
+const SVG = require("./lib/svg.js");
+const shapes = require("./lib/shapes.js");
+const Text = require("./lib/text.js");
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -48,7 +48,15 @@ rl.question("Enter text (up to 3 characters): ", (text) => {
           rl.close();
           return;
         }
-        const newShape = new Shape(shape, 100, 100);
+
+        let newShape;
+        if (shape === "circle") {
+          newShape = new shapes.Circle(textColor);
+        } else if (shape === "triangle") {
+          newShape = new shapes.Triangle(textColor);
+        } else if (shape === "square") {
+          newShape = new shapes.Square(textColor);
+        }
 
         rl.question("Enter shape color (color keyword or hexadecimal number): ", (shapeColor) => {
           if (!validColors.includes(shapeColor)) {
