@@ -3,6 +3,9 @@
 ## Description
 This is a simple command line tool to generate SVG logos from text. It uses the shapes.js, test JS file, svg.js, test JS file, text.js, test JS file, and validColors.js to create the individual pieces necessary to generate an SVG logo. We used Jest to run the tests, and Inquirer and FS as dependencies. We utilized OOP to create classes, constructors, and "extends" for each in order to further demonstrate our growing knowledge of backend development, and created test files to test certain requirements for our application. 
 
+## Disclosures
+I had help from my tutor Alexis, as well as the Xpert Learning Assistant, to complete this project to as it stands now. 
+
 ##  Installation
 
 Using node index.js to initialize the application to create your own SVG logo. 
